@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(8px);
@@ -76,133 +76,177 @@
             text-align: center;
         }
 
-        /* رسالة تحت الإنشاء */
-        .under-construction {
-            background: #fef7e6;
-            border-right: 8px solid #f9b81b;
-            border-radius: 30px;
-            padding: 35px 25px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .under-construction .icon {
-            font-size: 4rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .under-construction h2 {
+        /* عنوان القسم الرئيسي */
+        .main-title {
             color: #1e3c5c;
             font-size: 2.2rem;
             font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .under-construction p {
-            color: #2c3e50;
-            font-size: 1.3rem;
-            line-height: 1.7;
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            padding: 15px 25px;
-            border-radius: 60px;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
-        }
-
-        /* قسم الامتحانات الوزارية السابقة */
-        .exam-section {
-            margin-top: 30px;
-        }
-
-        .exam-card {
-            background: white;
-            border-radius: 50px;
-            padding: 25px;
-            box-shadow: 0 15px 25px rgba(0, 30, 60, 0.1);
-            transition: transform 0.2s;
-            border: 1px solid rgba(30, 60, 92, 0.1);
-        }
-
-        .exam-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .exam-card h3 {
-            color: #1e3c5c;
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .exam-card h3:after, .exam-card h3:before {
-            content: "📘";
-            font-size: 1.8rem;
-            opacity: 0.7;
-        }
-        .exam-card h3:before {
-            content: "📚";
-        }
-
-        .btn {
+            margin-bottom: 20px;
+            position: relative;
             display: inline-block;
+            padding: 0 20px;
+        }
+
+        .main-title:after {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 4px;
             background: #f9b81b;
-            color: #1e3c5c;
-            border: none;
-            padding: 20px 50px;
-            font-size: 1.6rem;
-            font-weight: 800;
-            border-radius: 60px;
-            cursor: pointer;
-            box-shadow: 0 10px 0 #b57c10, 0 8px 25px #f9b71b80;
-            transition: all 0.1s ease;
-            text-decoration: none;
-            border: 2px solid #ffd966;
-            letter-spacing: 1px;
-            margin: 15px 0 10px;
-        }
-
-        .btn:active {
-            transform: translateY(7px);
-            box-shadow: 0 3px 0 #b57c10, 0 8px 20px #f9b71b80;
-        }
-
-        .btn i {
-            font-style: normal;
-            margin-left: 10px;
-            font-size: 2rem;
-        }
-
-        .note {
-            color: #4a5f73;
-            font-size: 1.1rem;
-            background: #e9eef3;
-            padding: 10px 20px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-top: 15px;
+            margin: 10px auto 0;
+            border-radius: 10px;
         }
 
         /* توقيع الطالب */
         .student-signature {
-            margin: 20px 0 10px;
+            margin: 20px 0 30px;
             padding: 10px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #1e3c5c;
-            background: rgba(249, 184, 27, 0.1);
+            background: rgba(249, 184, 27, 0.15);
             border-radius: 50px;
             display: inline-block;
-            padding: 10px 30px;
-            border: 1px dashed #f9b81b;
+            padding: 12px 40px;
+            border: 2px dashed #f9b81b;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .student-signature span {
             font-weight: 800;
             color: #b57c10;
+            font-size: 1.5rem;
+        }
+
+        /* شبكة الأقسام الأربعة */
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0 40px;
+        }
+
+        /* بطاقة المادة */
+        .subject-card {
+            background: white;
+            border-radius: 40px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 15px 25px rgba(0, 30, 60, 0.15);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            border-color: #f9b81b;
+            box-shadow: 0 20px 30px rgba(249, 184, 27, 0.2);
+        }
+
+        .subject-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .subject-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .subject-desc {
+            color: #4a5f73;
+            font-size: 1.1rem;
+            background: #f0f4f8;
+            padding: 8px 15px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        /* ألوان مختلفة لكل مادة */
+        .subject-card.islamic {
+            background: linear-gradient(145deg, #e8f0e8, #d4e6d4);
+        }
+        .subject-card.islamic .subject-title {
+            color: #1d7a46;
+        }
+
+        .subject-card.history {
+            background: linear-gradient(145deg, #f0e6d8, #ecdcc5);
+        }
+        .subject-card.history .subject-title {
+            color: #b45f2b;
+        }
+
+        .subject-card.arabic {
+            background: linear-gradient(145deg, #f0e4f0, #e9d2e9);
+        }
+        .subject-card.arabic .subject-title {
+            color: #8e44ad;
+        }
+
+        .subject-card.english {
+            background: linear-gradient(145deg, #d9e6f2, #c2d9ec);
+        }
+        .subject-card.english .subject-title {
+            color: #2875b9;
+        }
+
+        /* قسم الامتحانات الوزارية السابقة */
+        .exam-section {
+            margin-top: 30px;
+            background: rgba(30, 60, 92, 0.03);
+            border-radius: 50px;
+            padding: 25px;
+            border: 2px solid rgba(249, 184, 27, 0.3);
+        }
+
+        .exam-section h3 {
+            color: #1e3c5c;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .exam-btn {
+            display: inline-block;
+            background: #f9b81b;
+            color: #1e3c5c;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #b57c10, 0 8px 20px #f9b71b80;
+            transition: all 0.1s ease;
+            text-decoration: none;
+            border: 2px solid #ffd966;
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+
+        .exam-btn:active {
+            transform: translateY(5px);
+            box-shadow: 0 3px 0 #b57c10, 0 8px 20px #f9b71b80;
+        }
+
+        .exam-note {
+            color: #4a5f73;
+            font-size: 1rem;
+            background: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 10px;
         }
 
         /* تذييل الصفحة */
@@ -222,16 +266,27 @@
         }
 
         /* للأجهزة الصغيرة */
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
+            .subjects-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
             .header h1 {
                 font-size: 1.8rem;
             }
-            .btn {
+            
+            .subject-title {
+                font-size: 1.8rem;
+            }
+            
+            .exam-btn {
                 font-size: 1.2rem;
                 padding: 15px 30px;
             }
-            .under-construction h2 {
-                font-size: 1.6rem;
+            
+            .main-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -248,41 +303,63 @@
 
         <!-- المحتوى الأساسي -->
         <div class="content">
-            <!-- رسالة تحت الإنشاء -->
-            <div class="under-construction">
-                <span class="icon">🚧🔧</span>
-                <h2>الموقع قيد الإعداد</h2>
-                <p>نعمل حالياً على تجهيز الموقع بكل ما هو مفيد لطلابنا الأعزاء. سيتم إضافة المواد والاختبارات قريباً جداً!</p>
-                <div style="margin-top: 20px; font-size: 2rem;">📆✨</div>
-            </div>
-
             <!-- توقيع الطالب عبدالرحمن المعايطه -->
             <div class="student-signature">
                 ✨ عمل الطالب: <span>عبدالرحمن المعايطه</span> ✨
             </div>
 
-            <!-- قسم الامتحانات الوزارية السابقة (زر منفصل) -->
-            <div class="exam-section">
-                <div class="exam-card">
-                    <h3>📄 بنك الأسئلة الرسمي</h3>
-                    <!-- الزر المطلوب: رابط مباشر للموقع الخارجي -->
-                    <a href="https://farmbot1238.github.io/w2/" target="_blank" class="btn">
-                        <i>📌</i> امتحانات وزاريه سابقه
-                    </a>
-                    <p class="note">✦ اضغط للانتقال إلى الامتحانات الوزارية ✦</p>
-                </div>
+            <!-- عنوان الأقسام -->
+            <h2 class="main-title">📚 اختبر نفسك</h2>
+
+            <!-- الأقسام الأربعة (شبكة 2×2) -->
+            <div class="subjects-grid">
+                <!-- 1. الدين -->
+                <a href="https://farmbot1238.github.io/d1/" target="_blank" class="subject-card islamic">
+                    <span class="subject-icon">🕌</span>
+                    <div class="subject-title">الدين</div>
+                    <span class="subject-desc">اختبر نفسك في التربية الإسلامية</span>
+                </a>
+
+                <!-- 2. التاريخ -->
+                <a href="https://farmbot1238.github.io/t1/" target="_blank" class="subject-card history">
+                    <span class="subject-icon">🏛️</span>
+                    <div class="subject-title">التاريخ</div>
+                    <span class="subject-desc">اختبر نفسك في التاريخ</span>
+                </a>
+
+                <!-- 3. العربي -->
+                <a href="https://farmbot1238.github.io/a1/" target="_blank" class="subject-card arabic">
+                    <span class="subject-icon">📖</span>
+                    <div class="subject-title">العربي</div>
+                    <span class="subject-desc">اختبر نفسك في اللغة العربية</span>
+                </a>
+
+                <!-- 4. الانجليزي -->
+                <a href="https://farmbot1238.github.io/e1/" target="_blank" class="subject-card english">
+                    <span class="subject-icon">🇬🇧</span>
+                    <div class="subject-title">الانجليزي</div>
+                    <span class="subject-desc">اختبر نفسك في اللغة الإنجليزية</span>
+                </a>
             </div>
 
-            <!-- رسالة تحفيزية إضافية -->
-            <div style="margin-top: 30px; background: rgba(30,60,92,0.03); border-radius: 30px; padding: 15px; color:#1e3c5c; font-size:1.1rem;">
-                ⭐ فريق متعاونين على التفوق يسعى لتفوقكم ⭐
+            <!-- قسم الامتحانات الوزارية السابقة -->
+            <div class="exam-section">
+                <h3>📄 الامتحانات الوزارية السابقة</h3>
+                <a href="https://farmbot1238.github.io/w2/" target="_blank" class="exam-btn">
+                    <span>📌</span> اضغط هنا للامتحانات الوزارية
+                </a>
+                <div class="exam-note">✦ جميع الامتحانات السابقة في مكان واحد ✦</div>
+            </div>
+
+            <!-- رسالة تحفيزية -->
+            <div style="margin-top: 30px; background: #1e3c5c; color: white; border-radius: 40px; padding: 15px 20px; font-size:1.2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                ⭐ كلنا متعاونين على التفوق والنجاح ⭐
             </div>
         </div>
 
         <!-- التذييل -->
         <div class="footer">
-            © 2025 <strong>متعاونين على التفوق</strong> - الفصل الثاني الدراسي. جميع الحقوق متاحة للطلاب. |
-            <a href="#">تواصل معنا</a>
+            © 2025 <strong>متعاونين على التفوق</strong> - الفصل الثاني الدراسي | تصميم: عبدالرحمن المعايطه
         </div>
     </div>
 </body>
